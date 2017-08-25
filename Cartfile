@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire"
+github "s4cha/Stevia"
+github "BoltsFramework/Bolts-Swift"
+github "tristanhimmelman/AlamofireObjectMapper" ~> 4.0
+github "appsquickly/Typhoon" ~> 3.6
