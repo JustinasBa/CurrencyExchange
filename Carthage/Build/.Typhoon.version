@@ -1,9 +1,0 @@
-{
-  "commitish" : "3.6.0",
-  "iOS" : [
-    {
-      "hash" : "c18ca28261d970062652af14f19817fd556b17613efd19017055d76ee0f454a7",
-      "name" : "Typhoon"
-    }
-  ]
-}

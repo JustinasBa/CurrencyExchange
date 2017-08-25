@@ -1,6 +1,0 @@
-framework module Typhoon {
-  umbrella header "Typhoon.h"
-
-  export *
-  module * { export * }
-}
