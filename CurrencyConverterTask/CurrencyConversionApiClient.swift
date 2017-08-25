@@ -25,17 +25,14 @@ class CurrencyConversionApiClient: NSObject {
             .request(request)
             .validate()
             .responseObject { (response: DataResponse<CurrencyConversionResult>) in
-                self.resolveTaskCompletionSource(taskCompletionSource: taskCompletionSource , result: response)
+                if let error = response.error {
+                    taskCompletionSource.set(error: error)
+                } else {
+                    guard let result = response.value else { return }
+                    taskCompletionSource.set(result: result)
+                }
             }
-        return taskCompletionSource.task
-    }
-    
-    private func resolveTaskCompletionSource(taskCompletionSource: TaskCompletionSource<CurrencyConversionResult>, result: DataResponse<CurrencyConversionResult>) {
-        if let error = result.error {
-            taskCompletionSource.set(error: error)
-        } else {
-            guard let result = result.value else { return }
-            taskCompletionSource.set(result: result)
-        }
+       return taskCompletionSource.task
     }
 }
+
