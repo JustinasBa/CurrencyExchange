@@ -14,18 +14,18 @@ enum APIRouter: URLRequestConvertible {
     
     static let baseURL = URL(string: "http://api.evp.lt/")!
     
-    case exhangeCurrency(String, String, String)
+    case sellCurrency(String, String, String)
     
     var method: HTTPMethod {
         switch self {
-        case .exhangeCurrency:
+        case .sellCurrency:
             return .get
         }
     }
     
     var path: String {
         switch self {
-            case .exhangeCurrency(let amount, let from, let to):
+            case .sellCurrency(let amount, let from, let to):
             return "currency/commercial/exchange/\(amount)-\(from)/\(to)/latest"
         }
     }

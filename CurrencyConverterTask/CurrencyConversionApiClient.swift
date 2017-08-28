@@ -19,7 +19,7 @@ class CurrencyConversionApiClient: NSObject {
     func calculate(fromAmount: Money, toCurrency: String) -> Task<CurrencyConversionResult> {
         let taskCompletionSource = TaskCompletionSource<CurrencyConversionResult>()
         
-        let request = APIRouter.exhangeCurrency(fromAmount.getAmountAsString(),fromAmount.currency, toCurrency)
+        let request = APIRouter.sellCurrency(fromAmount.getAmountAsString(),fromAmount.currency, toCurrency)
         
         Alamofire
             .request(request)

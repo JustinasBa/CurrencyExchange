@@ -27,6 +27,8 @@
 		409252F21F4C21EF00BBFE73 /* Stevia.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252EF1F4C21EF00BBFE73 /* Stevia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40B2DD2E1F50288A0028739F /* GeoConstaints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2DD2D1F50288A0028739F /* GeoConstaints.swift */; };
 		40B2DD311F503D7D0028739F /* CurrencyConversionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2DD301F503D7D0028739F /* CurrencyConversionResult.swift */; };
+		40B2DD341F50609C0028739F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2DD331F50609C0028739F /* ColorExtension.swift */; };
+		40B2DD361F5060AC0028739F /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2DD351F5060AC0028739F /* ColorConstants.swift */; };
 		40DA5C7C1F4C24BF00FD50B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409252ED1F4C21EF00BBFE73 /* Alamofire.framework */; };
 		40DA5C7D1F4C24BF00FD50B5 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */; };
 		40DA5C7E1F4C24BF00FD50B5 /* Stevia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409252EF1F4C21EF00BBFE73 /* Stevia.framework */; };
@@ -86,6 +88,8 @@
 		409252EF1F4C21EF00BBFE73 /* Stevia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stevia.framework; path = Carthage/Build/iOS/Stevia.framework; sourceTree = "<group>"; };
 		40B2DD2D1F50288A0028739F /* GeoConstaints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoConstaints.swift; sourceTree = "<group>"; };
 		40B2DD301F503D7D0028739F /* CurrencyConversionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionResult.swift; sourceTree = "<group>"; };
+		40B2DD331F50609C0028739F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		40B2DD351F5060AC0028739F /* ColorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		40DA5C811F4C258F00FD50B5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		40DA5C831F4C277000FD50B5 /* APIRounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRounter.swift; sourceTree = "<group>"; };
 		40DA5C931F4C54F700FD50B5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				40B2DD2D1F50288A0028739F /* GeoConstaints.swift */,
+				40B2DD351F5060AC0028739F /* ColorConstants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -238,6 +243,14 @@
 				40B2DD301F503D7D0028739F /* CurrencyConversionResult.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		40B2DD321F50607C0028739F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40B2DD331F50609C0028739F /* ColorExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		40DA5C9C1F4C7AA700FD50B5 /* Assamblies */ = {
@@ -280,6 +293,7 @@
 		ED999C471F4C1DB7004C018E /* CurrencyConverterTask */ = {
 			isa = PBXGroup;
 			children = (
+				40B2DD321F50607C0028739F /* Extensions */,
 				40B2DD2C1F5028630028739F /* Constants */,
 				409252E91F4C20E400BBFE73 /* CurrencyConversion */,
 				400CA57D1F4EC96200C95EA7 /* Common */,
@@ -453,6 +467,7 @@
 				409252EB1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift in Sources */,
 				400CA58B1F4ED1F600C95EA7 /* MainView.swift in Sources */,
 				400CA5991F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift in Sources */,
+				40B2DD361F5060AC0028739F /* ColorConstants.swift in Sources */,
 				40B2DD311F503D7D0028739F /* CurrencyConversionResult.swift in Sources */,
 				ED999C5B1F4C1DDD004C018E /* Money.swift in Sources */,
 				40DA5C841F4C277000FD50B5 /* APIRounter.swift in Sources */,
@@ -468,6 +483,7 @@
 				40DA5C9E1F4C7ACE00FD50B5 /* MainAssembly.swift in Sources */,
 				400CA5911F4ED8F500C95EA7 /* MainRouter.swift in Sources */,
 				40B2DD2E1F50288A0028739F /* GeoConstaints.swift in Sources */,
+				40B2DD341F50609C0028739F /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

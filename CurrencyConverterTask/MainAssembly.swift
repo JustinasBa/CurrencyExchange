@@ -37,9 +37,8 @@ class MainAssembly: TyphoonAssembly {
     
     dynamic func mainViewController() -> AnyObject {
         return TyphoonDefinition.withClass(MainViewController.self) { definition in
-            definition?.useInitializer(#selector(MainViewController.init(currencyConversionApiClient:)), parameters: {
-                initializer in
-                
+            definition?.useInitializer(#selector(MainViewController.init(currencyConversionApiClient:)),
+                                       parameters: { initializer in
                 initializer?.injectParameter(with: self.currencyConversionApiClient())
             })
             definition?.scope = TyphoonScope.singleton

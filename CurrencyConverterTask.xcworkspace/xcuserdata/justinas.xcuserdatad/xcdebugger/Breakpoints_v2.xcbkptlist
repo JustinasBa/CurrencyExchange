@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CurrencyConverterTask/MainViewController.swift"
-            timestampString = "525351132.445659"
+            filePath = "CurrencyConverterTask/MainView.swift"
+            timestampString = "525613759.427254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "onConvertionButtonClicked()"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "showCurrencyPicker(label:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

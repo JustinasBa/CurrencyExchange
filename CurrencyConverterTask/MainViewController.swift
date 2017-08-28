@@ -11,11 +11,10 @@ import UIKit
 class MainViewController: BaseViewController {
     
     fileprivate var currencyConversionApiClient: CurrencyConversionApiClient
-    var money: Money
     
     init(currencyConversionApiClient: CurrencyConversionApiClient) {
         self.currencyConversionApiClient = currencyConversionApiClient
-        money = Money(amount: 20, currency: "USD")
+        
         super.init()
     }
     
@@ -26,13 +25,12 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getView().delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
         
+        on("INJECTION_BUNDLE_NOTIFICATION") {
+            self.view = self.getView()
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -41,11 +39,11 @@ class MainViewController: BaseViewController {
 
 extension MainViewController: MainViewDelegate {
     
-    func onConvertionButtonClicked() {
+    func onConvertionButtonClicked(fromMoney: Money, toCurrency: String) {
         let _ =  currencyConversionApiClient
-            .calculate(fromAmount: money, toCurrency: "EUR")
+            .calculate(fromAmount: fromMoney, toCurrency: toCurrency)
             .continueWith { task in
-                print("calculate: ", task.result?.amount)
+                print("calculate: ", task.result?.getAmount())
         }
     }
 }

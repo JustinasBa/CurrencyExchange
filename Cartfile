@@ -1,5 +1,5 @@
-github "Alamofire/Alamofire"
-github "s4cha/Stevia"
+github "Alamofire/Alamofire" ~> 4.4
+github "s4cha/Stevia" ~> 3.2
 github "BoltsFramework/Bolts-Swift"
 github "tristanhimmelman/AlamofireObjectMapper" ~> 4.0
 github "appsquickly/Typhoon" ~> 3.6
