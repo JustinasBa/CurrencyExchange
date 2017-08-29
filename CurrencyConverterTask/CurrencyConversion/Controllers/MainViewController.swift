@@ -48,7 +48,27 @@ extension MainViewController: MainViewDelegate {
                 } else if let result = task.result {
                     print("calculate: ", result.getAmount())
                 }
+            }
+    }
+    
+    func onCurrencyLabelClicked(label: UILabel) {
+        let holdingCurrencies = ["EUR","USD","JPY"]
+        let currenciesOptions = UIAlertController(title: nil, message: "Choose currency: ", preferredStyle: .actionSheet)
+        
+        for currency in holdingCurrencies {
+            currenciesOptions.addAction(UIAlertAction(title: currency, style: .default, handler: {
+                (alert: UIAlertAction!) -> Void in
+                if self.getView().fromCurrencyLabel == label {
+                    self.getView().fromCurrencyLabel.text = currency
+                } else if self.getView().toCurrencyLabel == label {
+                    self.getView().toCurrencyLabel.text = currency
+                }
+            }))
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        currenciesOptions.addAction(cancelAction)
+        self.present(currenciesOptions, animated: true, completion: nil)
     }
 }
 

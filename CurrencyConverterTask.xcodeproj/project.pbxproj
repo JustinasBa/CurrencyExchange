@@ -21,7 +21,7 @@
 		400CA5951F4ED94400C95EA7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5941F4ED94400C95EA7 /* Router.swift */; };
 		400CA5971F4EDAC600C95EA7 /* UIViewController+Topmost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */; };
 		400CA5991F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */; };
-		403578FB1F55991000AEE0FC /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FA1F55991000AEE0FC /* ColorConstants.swift */; };
+		403578FB1F55991000AEE0FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FA1F55991000AEE0FC /* Colors.swift */; };
 		403578FD1F55994800AEE0FC /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FC1F55994800AEE0FC /* ColorExtension.swift */; };
 		409252EB1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */; };
 		409252F01F4C21EF00BBFE73 /* Alamofire.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252ED1F4C21EF00BBFE73 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,7 +82,7 @@
 		400CA5941F4ED94400C95EA7 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Topmost.swift"; sourceTree = "<group>"; };
 		400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentInNavigationViewController.swift"; sourceTree = "<group>"; };
-		403578FA1F55991000AEE0FC /* ColorConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		403578FA1F55991000AEE0FC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Constants/Colors.swift; sourceTree = "<group>"; };
 		403578FC1F55994800AEE0FC /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionApiClient.swift; sourceTree = "<group>"; };
 		409252ED1F4C21EF00BBFE73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -146,6 +146,7 @@
 		400CA57D1F4EC96200C95EA7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				403578FE1F55A37000AEE0FC /* Themes */,
 				40B2DD2C1F5028630028739F /* Constants */,
 				400CA5871F4ECF7300C95EA7 /* Controllers */,
 				ED999C5C1F4C1DE3004C018E /* Entities */,
@@ -200,6 +201,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		403578FE1F55A37000AEE0FC /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				403578FA1F55991000AEE0FC /* Colors.swift */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
 		409252E91F4C20E400BBFE73 /* CurrencyConversion */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,10 +244,8 @@
 		40B2DD2C1F5028630028739F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				403578FA1F55991000AEE0FC /* ColorConstants.swift */,
 				40B2DD2D1F50288A0028739F /* GeoConstaints.swift */,
 			);
-			name = Constants;
 			path = Constants;
 			sourceTree = "<group>";
 		};
@@ -494,7 +501,7 @@
 				ED999C491F4C1DB7004C018E /* AppDelegate.swift in Sources */,
 				400CA57F1F4EC9AE00C95EA7 /* BaseViewController.swift in Sources */,
 				400CA5971F4EDAC600C95EA7 /* UIViewController+Topmost.swift in Sources */,
-				403578FB1F55991000AEE0FC /* ColorConstants.swift in Sources */,
+				403578FB1F55991000AEE0FC /* Colors.swift in Sources */,
 				400CA5811F4EC9E600C95EA7 /* BaseView.swift in Sources */,
 				400CA5951F4ED94400C95EA7 /* Router.swift in Sources */,
 				400CA5861F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift in Sources */,

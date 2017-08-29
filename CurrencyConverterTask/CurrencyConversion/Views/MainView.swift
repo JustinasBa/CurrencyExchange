@@ -11,6 +11,7 @@ import Stevia
 
 protocol MainViewDelegate: BaseSteviaViewDelegate {
     func onSellCurrencyButtonClicked(fromMoney: Money, toCurrency: String)
+    func onCurrencyLabelClicked(label: UILabel)
 }
 
 class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
@@ -20,8 +21,6 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
     let toCurrencyLabel = UILabel()
     let amountTextField = UITextField()
     let separatorView = UIView()
-    
-    private var currentChandedLabel: Int?
     
     func getDelegate() -> MainViewDelegate? {
         return self.delegate as? MainViewDelegate
@@ -98,30 +97,11 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
     //MARK: - UITapGestureRecognizer
     
     func fromTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
-        showCurrencyPicker(label: fromCurrencyLabel)
+        self.getDelegate()?.onCurrencyLabelClicked(label: fromCurrencyLabel)
     }
     
     func toTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
-        showCurrencyPicker(label: toCurrencyLabel)
+        self.getDelegate()?.onCurrencyLabelClicked(label: toCurrencyLabel)
     }
     
-    func showCurrencyPicker(label: UILabel) {
-        
-        let holdingCurrencies = ["EUR","USD","JPY"]
-        let currenciesOptions = UIAlertController(title: nil, message: "Choose currency: ", preferredStyle: .actionSheet)
-        
-        for module in 0..<holdingCurrencies.count {
-            let currency = holdingCurrencies[module]
-            
-            currenciesOptions.addAction(UIAlertAction(title: currency, style: .default, handler: {
-                (alert: UIAlertAction!) -> Void in
-                label.text = holdingCurrencies[module]
-            }))
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        currenciesOptions.addAction(cancelAction)
-        let topView = self.window?.rootViewController
-        topView?.present(currenciesOptions, animated: true, completion: nil)
-    }
 }
