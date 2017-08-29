@@ -7,23 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5F7FF83C94DF9DBEDAD931 /* Pods_CurrencyConverterTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167C0D846ED2413067637392 /* Pods_CurrencyConverterTask.framework */; };
+		400CA5721F4D7C0700C95EA7 /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400CA5711F4D7C0700C95EA7 /* Typhoon.framework */; };
+		400CA5751F4D7E0B00C95EA7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 400CA5731F4D7E0B00C95EA7 /* Cartfile */; };
+		400CA5761F4D7E0B00C95EA7 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 400CA5741F4D7E0B00C95EA7 /* Cartfile.resolved */; };
+		400CA5781F4D7FC300C95EA7 /* Typhoon.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 400CA5771F4D7FC300C95EA7 /* Typhoon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		400CA57F1F4EC9AE00C95EA7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA57E1F4EC9AE00C95EA7 /* BaseViewController.swift */; };
+		400CA5811F4EC9E600C95EA7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5801F4EC9E600C95EA7 /* BaseView.swift */; };
+		400CA5831F4ECA0800C95EA7 /* BaseSteviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5821F4ECA0800C95EA7 /* BaseSteviaView.swift */; };
+		400CA5861F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5851F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift */; };
+		400CA58B1F4ED1F600C95EA7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA58A1F4ED1F600C95EA7 /* MainView.swift */; };
+		400CA5911F4ED8F500C95EA7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5901F4ED8F500C95EA7 /* MainRouter.swift */; };
+		400CA5951F4ED94400C95EA7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5941F4ED94400C95EA7 /* Router.swift */; };
+		400CA5971F4EDAC600C95EA7 /* UIViewController+Topmost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */; };
+		400CA5991F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */; };
+		409252EB1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */; };
+		409252F01F4C21EF00BBFE73 /* Alamofire.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252ED1F4C21EF00BBFE73 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		409252F11F4C21EF00BBFE73 /* BoltsSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		409252F21F4C21EF00BBFE73 /* Stevia.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252EF1F4C21EF00BBFE73 /* Stevia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40B2DD2E1F50288A0028739F /* GeoConstaints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2DD2D1F50288A0028739F /* GeoConstaints.swift */; };
+		40B2DD311F503D7D0028739F /* CurrencyConversionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2DD301F503D7D0028739F /* CurrencyConversionResult.swift */; };
+		40D289881F5406A0000906DD /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D289871F5406A0000906DD /* Alerts.swift */; };
+		40DA5C7C1F4C24BF00FD50B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409252ED1F4C21EF00BBFE73 /* Alamofire.framework */; };
+		40DA5C7D1F4C24BF00FD50B5 /* BoltsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */; };
+		40DA5C7E1F4C24BF00FD50B5 /* Stevia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409252EF1F4C21EF00BBFE73 /* Stevia.framework */; };
+		40DA5C841F4C277000FD50B5 /* APIRounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA5C831F4C277000FD50B5 /* APIRounter.swift */; };
+		40DA5C941F4C54F700FD50B5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DA5C931F4C54F700FD50B5 /* ObjectMapper.framework */; };
+		40DA5C961F4C54FA00FD50B5 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DA5C951F4C54FA00FD50B5 /* AlamofireObjectMapper.framework */; };
+		40DA5C981F4C557000FD50B5 /* AlamofireObjectMapper.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 40DA5C971F4C557000FD50B5 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40DA5C9A1F4C558800FD50B5 /* ObjectMapper.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 40DA5C991F4C558800FD50B5 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40DA5C9E1F4C7ACE00FD50B5 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA5C9D1F4C7ACE00FD50B5 /* MainAssembly.swift */; };
 		ED999C491F4C1DB7004C018E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED999C481F4C1DB7004C018E /* AppDelegate.swift */; };
-		ED999C4B1F4C1DB7004C018E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED999C4A1F4C1DB7004C018E /* ViewController.swift */; };
-		ED999C4E1F4C1DB7004C018E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED999C4C1F4C1DB7004C018E /* Main.storyboard */; };
+		ED999C4B1F4C1DB7004C018E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED999C4A1F4C1DB7004C018E /* MainViewController.swift */; };
 		ED999C501F4C1DB7004C018E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED999C4F1F4C1DB7004C018E /* Assets.xcassets */; };
 		ED999C531F4C1DB7004C018E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED999C511F4C1DB7004C018E /* LaunchScreen.storyboard */; };
 		ED999C5B1F4C1DDD004C018E /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED999C5A1F4C1DDD004C018E /* Money.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		409252EC1F4C215500BBFE73 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				400CA5781F4D7FC300C95EA7 /* Typhoon.framework in Copy Files */,
+				40DA5C9A1F4C558800FD50B5 /* ObjectMapper.framework in Copy Files */,
+				40DA5C981F4C557000FD50B5 /* AlamofireObjectMapper.framework in Copy Files */,
+				409252F01F4C21EF00BBFE73 /* Alamofire.framework in Copy Files */,
+				409252F11F4C21EF00BBFE73 /* BoltsSwift.framework in Copy Files */,
+				409252F21F4C21EF00BBFE73 /* Stevia.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		167C0D846ED2413067637392 /* Pods_CurrencyConverterTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyConverterTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4D4D227AEBF10742401C74 /* Pods-CurrencyConverterTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverterTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyConverterTask/Pods-CurrencyConverterTask.release.xcconfig"; sourceTree = "<group>"; };
+		400CA56F1F4D7A4800C95EA7 /* CurrencyConverterTask-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurrencyConverterTask-Bridging-Header.h"; sourceTree = "<group>"; };
+		400CA5711F4D7C0700C95EA7 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
+		400CA5731F4D7E0B00C95EA7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		400CA5741F4D7E0B00C95EA7 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		400CA5771F4D7FC300C95EA7 /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
+		400CA57E1F4EC9AE00C95EA7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		400CA5801F4EC9E600C95EA7 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		400CA5821F4ECA0800C95EA7 /* BaseSteviaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSteviaView.swift; sourceTree = "<group>"; };
+		400CA5851F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+isRootViewControllerInNavigation.swift"; sourceTree = "<group>"; };
+		400CA58A1F4ED1F600C95EA7 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		400CA5901F4ED8F500C95EA7 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		400CA5941F4ED94400C95EA7 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Topmost.swift"; sourceTree = "<group>"; };
+		400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentInNavigationViewController.swift"; sourceTree = "<group>"; };
+		409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyConversionApiClient.swift; path = CurrencyConversionApiClient.swift; sourceTree = "<group>"; };
+		409252ED1F4C21EF00BBFE73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = Carthage/Build/iOS/BoltsSwift.framework; sourceTree = "<group>"; };
+		409252EF1F4C21EF00BBFE73 /* Stevia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stevia.framework; path = Carthage/Build/iOS/Stevia.framework; sourceTree = "<group>"; };
+		40B2DD2D1F50288A0028739F /* GeoConstaints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoConstaints.swift; sourceTree = "<group>"; };
+		40B2DD301F503D7D0028739F /* CurrencyConversionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionResult.swift; sourceTree = "<group>"; };
+		40D289871F5406A0000906DD /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		40DA5C831F4C277000FD50B5 /* APIRounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRounter.swift; sourceTree = "<group>"; };
+		40DA5C931F4C54F700FD50B5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		40DA5C951F4C54FA00FD50B5 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		40DA5C971F4C557000FD50B5 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		40DA5C991F4C558800FD50B5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		40DA5C9D1F4C7ACE00FD50B5 /* MainAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		5530B07252C19AE76C9615C4 /* Pods-CurrencyConverterTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverterTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyConverterTask/Pods-CurrencyConverterTask.debug.xcconfig"; sourceTree = "<group>"; };
 		ED999C451F4C1DB7004C018E /* CurrencyConverterTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverterTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED999C481F4C1DB7004C018E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED999C4A1F4C1DB7004C018E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED999C4D1F4C1DB7004C018E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED999C4A1F4C1DB7004C018E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED999C4F1F4C1DB7004C018E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED999C521F4C1DB7004C018E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED999C541F4C1DB7004C018E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED999C5A1F4C1DDD004C018E /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Money.swift; path = Entities/Money.swift; sourceTree = "<group>"; };
+		ED999C5A1F4C1DDD004C018E /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +108,192 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400CA5721F4D7C0700C95EA7 /* Typhoon.framework in Frameworks */,
+				40DA5C961F4C54FA00FD50B5 /* AlamofireObjectMapper.framework in Frameworks */,
+				40DA5C941F4C54F700FD50B5 /* ObjectMapper.framework in Frameworks */,
+				40DA5C7C1F4C24BF00FD50B5 /* Alamofire.framework in Frameworks */,
+				40DA5C7D1F4C24BF00FD50B5 /* BoltsSwift.framework in Frameworks */,
+				40DA5C7E1F4C24BF00FD50B5 /* Stevia.framework in Frameworks */,
+				0B5F7FF83C94DF9DBEDAD931 /* Pods_CurrencyConverterTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400CA57B1F4DA05A00C95EA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED999C4A1F4C1DB7004C018E /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		400CA57C1F4EC8F100C95EA7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				40DA5C831F4C277000FD50B5 /* APIRounter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		400CA57D1F4EC96200C95EA7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				400CA5871F4ECF7300C95EA7 /* Controllers */,
+				ED999C5C1F4C1DE3004C018E /* Entities */,
+				400CA5841F4ECA5800C95EA7 /* Extensions */,
+				400CA5881F4ECF9000C95EA7 /* Views */,
+				400CA5941F4ED94400C95EA7 /* Router.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		400CA5841F4ECA5800C95EA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */,
+				400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */,
+				400CA5851F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		400CA5871F4ECF7300C95EA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				400CA57E1F4EC9AE00C95EA7 /* BaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		400CA5881F4ECF9000C95EA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				400CA5821F4ECA0800C95EA7 /* BaseSteviaView.swift */,
+				400CA5801F4EC9E600C95EA7 /* BaseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		400CA5891F4ED1E500C95EA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				400CA58A1F4ED1F600C95EA7 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		400CA58F1F4ED8E700C95EA7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				400CA5901F4ED8F500C95EA7 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		409252E91F4C20E400BBFE73 /* CurrencyConversion */ = {
+			isa = PBXGroup;
+			children = (
+				400CA57C1F4EC8F100C95EA7 /* API */,
+				40DA5C9C1F4C7AA700FD50B5 /* Assamblies */,
+				400CA57B1F4DA05A00C95EA7 /* Controllers */,
+				40FE67AA1F55617B00A421E5 /* Entities */,
+				40FE67AC1F55621600A421E5 /* Errors */,
+				400CA58F1F4ED8E700C95EA7 /* Router */,
+				40FE67AB1F55620A00A421E5 /* Services */,
+				400CA5891F4ED1E500C95EA7 /* Views */,
+			);
+			path = CurrencyConversion;
+			sourceTree = "<group>";
+		};
+		409252F31F4C21FB00BBFE73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				400CA5771F4D7FC300C95EA7 /* Typhoon.framework */,
+				400CA5711F4D7C0700C95EA7 /* Typhoon.framework */,
+				40DA5C991F4C558800FD50B5 /* ObjectMapper.framework */,
+				40DA5C971F4C557000FD50B5 /* AlamofireObjectMapper.framework */,
+				40DA5C951F4C54FA00FD50B5 /* AlamofireObjectMapper.framework */,
+				40DA5C931F4C54F700FD50B5 /* ObjectMapper.framework */,
+				409252ED1F4C21EF00BBFE73 /* Alamofire.framework */,
+				409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */,
+				409252EF1F4C21EF00BBFE73 /* Stevia.framework */,
+				167C0D846ED2413067637392 /* Pods_CurrencyConverterTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40B2DD2C1F5028630028739F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				40B2DD2D1F50288A0028739F /* GeoConstaints.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		40DA5C9C1F4C7AA700FD50B5 /* Assamblies */ = {
+			isa = PBXGroup;
+			children = (
+				40DA5C9D1F4C7ACE00FD50B5 /* MainAssembly.swift */,
+			);
+			path = Assamblies;
+			sourceTree = "<group>";
+		};
+		40FE67AA1F55617B00A421E5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				40B2DD301F503D7D0028739F /* CurrencyConversionResult.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		40FE67AB1F55620A00A421E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		40FE67AC1F55621600A421E5 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				40D289871F5406A0000906DD /* Alerts.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		40FE67AD1F5565FD00A421E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED999C4F1F4C1DB7004C018E /* Assets.xcassets */,
+				400CA56F1F4D7A4800C95EA7 /* CurrencyConverterTask-Bridging-Header.h */,
+				ED999C541F4C1DB7004C018E /* Info.plist */,
+				ED999C511F4C1DB7004C018E /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A68AE756C0B4B042D0F554A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5530B07252C19AE76C9615C4 /* Pods-CurrencyConverterTask.debug.xcconfig */,
+				3E4D4D227AEBF10742401C74 /* Pods-CurrencyConverterTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED999C3C1F4C1DB7004C018E = {
 			isa = PBXGroup;
 			children = (
 				ED999C471F4C1DB7004C018E /* CurrencyConverterTask */,
+				409252F31F4C21FB00BBFE73 /* Frameworks */,
+				6A68AE756C0B4B042D0F554A /* Pods */,
 				ED999C461F4C1DB7004C018E /* Products */,
+				40FE67AD1F5565FD00A421E5 /* Supporting Files */,
+				400CA5731F4D7E0B00C95EA7 /* Cartfile */,
+				400CA5741F4D7E0B00C95EA7 /* Cartfile.resolved */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +308,10 @@
 		ED999C471F4C1DB7004C018E /* CurrencyConverterTask */ = {
 			isa = PBXGroup;
 			children = (
-				ED999C5C1F4C1DE3004C018E /* Entities */,
+				400CA57D1F4EC96200C95EA7 /* Common */,
+				40B2DD2C1F5028630028739F /* Constants */,
+				409252E91F4C20E400BBFE73 /* CurrencyConversion */,
 				ED999C481F4C1DB7004C018E /* AppDelegate.swift */,
-				ED999C4A1F4C1DB7004C018E /* ViewController.swift */,
-				ED999C4C1F4C1DB7004C018E /* Main.storyboard */,
-				ED999C4F1F4C1DB7004C018E /* Assets.xcassets */,
-				ED999C511F4C1DB7004C018E /* LaunchScreen.storyboard */,
-				ED999C541F4C1DB7004C018E /* Info.plist */,
 			);
 			path = CurrencyConverterTask;
 			sourceTree = "<group>";
@@ -72,7 +321,7 @@
 			children = (
 				ED999C5A1F4C1DDD004C018E /* Money.swift */,
 			);
-			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +331,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED999C571F4C1DB7004C018E /* Build configuration list for PBXNativeTarget "CurrencyConverterTask" */;
 			buildPhases = (
+				32DCDE1B61AD1A9517AC36F2 /* [CP] Check Pods Manifest.lock */,
 				ED999C411F4C1DB7004C018E /* Sources */,
 				ED999C421F4C1DB7004C018E /* Frameworks */,
 				ED999C431F4C1DB7004C018E /* Resources */,
+				409252EC1F4C215500BBFE73 /* Copy Files */,
+				40DA5C7B1F4C22B100FD50B5 /* ShellScript */,
+				0F5484E55B738C090294F937 /* [CP] Embed Pods Frameworks */,
+				169C0B9D6F9E760FB2BFB7B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,40 +391,120 @@
 			files = (
 				ED999C531F4C1DB7004C018E /* LaunchScreen.storyboard in Resources */,
 				ED999C501F4C1DB7004C018E /* Assets.xcassets in Resources */,
-				ED999C4E1F4C1DB7004C018E /* Main.storyboard in Resources */,
+				400CA5751F4D7E0B00C95EA7 /* Cartfile in Resources */,
+				400CA5761F4D7E0B00C95EA7 /* Cartfile.resolved in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F5484E55B738C090294F937 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CurrencyConverterTask/Pods-CurrencyConverterTask-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-10/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CurrencyConverterTask/Pods-CurrencyConverterTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		169C0B9D6F9E760FB2BFB7B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CurrencyConverterTask/Pods-CurrencyConverterTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32DCDE1B61AD1A9517AC36F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CurrencyConverterTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40DA5C7B1F4C22B100FD50B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BoltsSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Stevia.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BoltsSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED999C411F4C1DB7004C018E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409252EB1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift in Sources */,
+				400CA58B1F4ED1F600C95EA7 /* MainView.swift in Sources */,
+				400CA5991F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift in Sources */,
+				40B2DD311F503D7D0028739F /* CurrencyConversionResult.swift in Sources */,
 				ED999C5B1F4C1DDD004C018E /* Money.swift in Sources */,
-				ED999C4B1F4C1DB7004C018E /* ViewController.swift in Sources */,
+				40DA5C841F4C277000FD50B5 /* APIRounter.swift in Sources */,
+				400CA5831F4ECA0800C95EA7 /* BaseSteviaView.swift in Sources */,
+				ED999C4B1F4C1DB7004C018E /* MainViewController.swift in Sources */,
 				ED999C491F4C1DB7004C018E /* AppDelegate.swift in Sources */,
+				400CA57F1F4EC9AE00C95EA7 /* BaseViewController.swift in Sources */,
+				400CA5971F4EDAC600C95EA7 /* UIViewController+Topmost.swift in Sources */,
+				400CA5811F4EC9E600C95EA7 /* BaseView.swift in Sources */,
+				400CA5951F4ED94400C95EA7 /* Router.swift in Sources */,
+				400CA5861F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift in Sources */,
+				40DA5C9E1F4C7ACE00FD50B5 /* MainAssembly.swift in Sources */,
+				40D289881F5406A0000906DD /* Alerts.swift in Sources */,
+				400CA5911F4ED8F500C95EA7 /* MainRouter.swift in Sources */,
+				40B2DD2E1F50288A0028739F /* GeoConstaints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED999C4C1F4C1DB7004C018E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED999C4D1F4C1DB7004C018E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ED999C511F4C1DB7004C018E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ED999C521F4C1DB7004C018E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -273,26 +607,42 @@
 		};
 		ED999C581F4C1DB7004C018E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5530B07252C19AE76C9615C4 /* Pods-CurrencyConverterTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6YAQCX388J;
-				INFOPLIST_FILE = CurrencyConverterTask/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paysera.CurrencyConverterTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/justinas/Desktop/Projects/ios-app-currency-converter-jbaronas/CurrencyConverterTask/CurrencyConverterTask-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		ED999C591F4C1DB7004C018E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E4D4D227AEBF10742401C74 /* Pods-CurrencyConverterTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6YAQCX388J;
-				INFOPLIST_FILE = CurrencyConverterTask/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paysera.CurrencyConverterTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/justinas/Desktop/Projects/ios-app-currency-converter-jbaronas/CurrencyConverterTask/CurrencyConverterTask-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -316,6 +666,7 @@
 				ED999C591F4C1DB7004C018E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
