@@ -25,7 +25,7 @@ class MainRouter: Router {
         UIApplication.shared.keyWindow?.rootViewController = mainViewController
         UIView.transition(
             with: window,
-            duration: 0.5,
+            duration: 0,
             options: .transitionCrossDissolve,
             animations: nil) { finish in
                 completion?(true)

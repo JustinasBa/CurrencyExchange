@@ -14,9 +14,8 @@ class MainAssembly: TyphoonAssembly {
    
     dynamic func appDelegate() -> AnyObject {
         return TyphoonDefinition.withClass(AppDelegate.self) {definition in
-            definition?.injectProperty(#selector(self.mainViewController), with: self.mainViewController())
-            definition?.injectProperty("mainAssembly", with: self)
-            definition?.scope = TyphoonScope.prototype
+            definition?.injectProperty(#selector(self.mainRouter), with: self.mainRouter())
+            definition?.scope = TyphoonScope.singleton
         } as AnyObject
     }
     
@@ -37,11 +36,12 @@ class MainAssembly: TyphoonAssembly {
     
     dynamic func mainViewController() -> AnyObject {
         return TyphoonDefinition.withClass(MainViewController.self) { definition in
-            definition?.useInitializer(#selector(MainViewController.init(currencyConversionApiClient:)),
-                                       parameters: { initializer in
+            definition?.useInitializer(#selector(MainViewController.init(currencyConversionApiClient:)), parameters: {
+                initializer in
+                
                 initializer?.injectParameter(with: self.currencyConversionApiClient())
             })
-            definition?.scope = TyphoonScope.singleton
+            definition?.scope = TyphoonScope.prototype
         } as AnyObject
     }
 }

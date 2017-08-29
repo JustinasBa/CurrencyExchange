@@ -29,11 +29,10 @@ class CurrencyConversionResult: NSObject, Mappable {
         currency <- map["currency"]
     }
     
-    func getAmount() -> Money {
+    func getAmount() -> Money? {
         guard let amount = self.amount,
-            let currency = self.currency else { return Money(amount: 0, currency: "EUR") }
+            let currency = self.currency else { return nil }
         
         return Money(amountString: amount, currency: currency)
     }
-    
 }

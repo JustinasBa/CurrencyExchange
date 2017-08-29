@@ -13,15 +13,17 @@ import Typhoon
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var mainViewController: MainViewController!
+    var mainRouter: MainRouter!
     var mainAssembly: MainAssembly!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.initializeDependencyContainer()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = mainViewController
-        window!.makeKeyAndVisible()
+        self.window!.makeKeyAndVisible()
+        mainRouter.showMain { (true) -> (Void) in
+            print("SHowed up")
+        }
         
         return true
     }

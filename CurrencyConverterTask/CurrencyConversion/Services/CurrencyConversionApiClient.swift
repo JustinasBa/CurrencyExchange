@@ -28,7 +28,8 @@ class CurrencyConversionApiClient: NSObject {
                 if let error = response.error {
                     taskCompletionSource.set(error: error)
                 } else {
-                    guard let result = response.value else { return }
+                    guard let result = response.value else {
+                        return taskCompletionSource.set(error: response.error! )}
                     taskCompletionSource.set(result: result)
                 }
             }

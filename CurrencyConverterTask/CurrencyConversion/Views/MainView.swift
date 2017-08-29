@@ -10,10 +10,11 @@ import Foundation
 import Stevia
 
 protocol MainViewDelegate: BaseSteviaViewDelegate {
-    func onConvertionButtonClicked(fromMoney: Money, toCurrency: String)
+    func onSellCurrencyButtonClicked(fromMoney: Money, toCurrency: String)
 }
 
 class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
+    
     let convertButton = UIButton()
     let fromCurrencyLabel = UILabel()
     let toCurrencyLabel = UILabel()
@@ -47,7 +48,7 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
             100,
             |-16-convertButton-16-| ~ 60
         )
-
+        
         let fromTapRecognizer = UITapGestureRecognizer(target: self, action:#selector(fromTapGestureHandler(sender:)))
         fromTapRecognizer.delegate = self
         fromCurrencyLabel.addGestureRecognizer(fromTapRecognizer)
@@ -59,7 +60,7 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
         toCurrencyLabel.isUserInteractionEnabled = true
     }
     
-//MARK - Actions
+    //MARK - Actions
     
     private func convertButtonTapped() {
         guard let fromCurrency = self.fromCurrencyLabel.text else { return }
@@ -67,10 +68,10 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
         guard let toCurrency = self.toCurrencyLabel.text else { return }
         let money = Money(amountString: fromAmount, currency: fromCurrency)
         
-        self.getDelegate()?.onConvertionButtonClicked(fromMoney: money, toCurrency: toCurrency)
+        self.getDelegate()?.onSellCurrencyButtonClicked(fromMoney: money, toCurrency: toCurrency)
     }
     
-//MARK: - Style
+    //MARK: - Style
     
     private func fieldStyle(field: UITextField) {
         field.borderStyle = .roundedRect
@@ -94,7 +95,7 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
     }
     
     
-//MARK: - UITapGestureRecognizer
+    //MARK: - UITapGestureRecognizer
     
     func fromTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
         showCurrencyPicker(label: fromCurrencyLabel)
