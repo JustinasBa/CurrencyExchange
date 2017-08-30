@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ExhangeType {
+    case Sell
+    case Buy
+}
+
 class MainViewController: BaseViewController {
     
     fileprivate var currencyConversionApiClient: CurrencyConversionApiClient
@@ -34,6 +39,28 @@ class MainViewController: BaseViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func showCurrencyPicker(currency: String, exhangeType: ExhangeType) {
+        let holdingCurrencies = ["EUR","USD","JPY"]
+        let currenciesOptions = UIAlertController(title: nil, message: "Choose currency: ", preferredStyle: .actionSheet)
+        
+        for currency in holdingCurrencies {
+            currenciesOptions.addAction(UIAlertAction(title: currency, style: .default, handler: {
+                (alert: UIAlertAction!) -> Void in
+                
+                if exhangeType == .Sell {
+                    self.getView().setSellingCurrency(currency: currency)
+                } else if exhangeType == .Buy {
+                    self.getView().setBuyingCurrency(currency: currency)
+                }
+            }))
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        currenciesOptions.addAction(cancelAction)
+        self.present(currenciesOptions, animated: true, completion: nil)
+    }
+
 }
 
 
@@ -50,25 +77,11 @@ extension MainViewController: MainViewDelegate {
                 }
             }
     }
-    
-    func onCurrencyLabelClicked(label: UILabel) {
-        let holdingCurrencies = ["EUR","USD","JPY"]
-        let currenciesOptions = UIAlertController(title: nil, message: "Choose currency: ", preferredStyle: .actionSheet)
-        
-        for currency in holdingCurrencies {
-            currenciesOptions.addAction(UIAlertAction(title: currency, style: .default, handler: {
-                (alert: UIAlertAction!) -> Void in
-                if self.getView().fromCurrencyLabel == label {
-                    self.getView().fromCurrencyLabel.text = currency
-                } else if self.getView().toCurrencyLabel == label {
-                    self.getView().toCurrencyLabel.text = currency
-                }
-            }))
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        currenciesOptions.addAction(cancelAction)
-        self.present(currenciesOptions, animated: true, completion: nil)
+    func onBuyingCurrencySelectionClicked(currency: String) {
+        self.showCurrencyPicker(currency: currency, exhangeType: .Buy)
+    }
+    func onSellingCurrencySelectionClicked(currency: String) {
+        self.showCurrencyPicker(currency: currency, exhangeType: .Sell)
     }
 }
 

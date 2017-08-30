@@ -11,16 +11,18 @@ import Stevia
 
 protocol MainViewDelegate: BaseSteviaViewDelegate {
     func onSellCurrencyButtonClicked(fromMoney: Money, toCurrency: String)
-    func onCurrencyLabelClicked(label: UILabel)
+//    func onCurrencyLabelClicked(label: UILabel)
+    func onSellingCurrencySelectionClicked(currency: String)
+    func onBuyingCurrencySelectionClicked(currency: String)
 }
 
 class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
     
-    let convertButton = UIButton()
-    let fromCurrencyLabel = UILabel()
-    let toCurrencyLabel = UILabel()
-    let amountTextField = UITextField()
-    let separatorView = UIView()
+    fileprivate let convertButton = UIButton()
+    fileprivate let sellingCurrencyLabel = UILabel()
+    fileprivate let buyingCurrencyLabel = UILabel()
+    fileprivate let amountTextField = UITextField()
+    fileprivate let separatorView = UIView()
     
     func getDelegate() -> MainViewDelegate? {
         return self.delegate as? MainViewDelegate
@@ -31,40 +33,49 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
         backgroundColor = .white
         sv(
             convertButton.text("Convert").style(convertButtonStyle).tap(convertButtonTapped),
-            fromCurrencyLabel.text("EUR").style(currencyLabelStyle),
-            toCurrencyLabel.text("EUR").style(currencyLabelStyle),
+            sellingCurrencyLabel.text("EUR").style(currencyLabelStyle),
+            buyingCurrencyLabel.text("EUR").style(currencyLabelStyle),
             amountTextField.placeholder("0.0").style(fieldStyle),
             separatorView.style(separatorViewStyle)
         )
         
         layout(
             200,
-            alignHorizontally(|-16-fromCurrencyLabel--amountTextField-16-|),
+            alignHorizontally(|-16-sellingCurrencyLabel--amountTextField-16-|),
             10,
             alignHorizontally(|-separatorView.height(1)-|),
             10,
-            alignHorizontally(|-16-toCurrencyLabel),
+            alignHorizontally(|-16-buyingCurrencyLabel),
             100,
             |-16-convertButton-16-| ~ 60
         )
         
-        let fromTapRecognizer = UITapGestureRecognizer(target: self, action:#selector(fromTapGestureHandler(sender:)))
+        let fromTapRecognizer = UITapGestureRecognizer(target: self, action:#selector(sellingCurrencySelectionTapGestureHandler(sender:)))
         fromTapRecognizer.delegate = self
-        fromCurrencyLabel.addGestureRecognizer(fromTapRecognizer)
-        fromCurrencyLabel.isUserInteractionEnabled = true
+        sellingCurrencyLabel.addGestureRecognizer(fromTapRecognizer)
+        sellingCurrencyLabel.isUserInteractionEnabled = true
         
-        let toTapRecognizer = UITapGestureRecognizer(target: self, action:#selector(toTapGestureHandler(sender:)))
+        let toTapRecognizer = UITapGestureRecognizer(target: self, action:#selector(buyingCurrencySelectionTapGestureHandler(sender:)))
         toTapRecognizer.delegate = self
-        toCurrencyLabel.addGestureRecognizer(toTapRecognizer)
-        toCurrencyLabel.isUserInteractionEnabled = true
+        buyingCurrencyLabel.addGestureRecognizer(toTapRecognizer)
+        buyingCurrencyLabel.isUserInteractionEnabled = true
+    }
+    
+    //MARK - Setters Methods
+    
+    func setSellingCurrency(currency: String) {
+        sellingCurrencyLabel.text = currency
+    }
+    func setBuyingCurrency(currency: String) {
+        buyingCurrencyLabel.text = currency
     }
     
     //MARK - Actions
     
     private func convertButtonTapped() {
-        guard let fromCurrency = self.fromCurrencyLabel.text else { return }
+        guard let fromCurrency = self.buyingCurrencyLabel.text else { return }
         guard let fromAmount = self.amountTextField.text else { return }
-        guard let toCurrency = self.toCurrencyLabel.text else { return }
+        guard let toCurrency = self.buyingCurrencyLabel.text else { return }
         let money = Money(amountString: fromAmount, currency: fromCurrency)
         
         self.getDelegate()?.onSellCurrencyButtonClicked(fromMoney: money, toCurrency: toCurrency)
@@ -81,7 +92,7 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
     }
     
     private func convertButtonStyle(button: UIButton) {
-        button.backgroundColor = kColorGreen
+        button.backgroundColor = Themes.buttonColorGreen()
         button.layer.cornerRadius = button.frame.height / 2
     }
     
@@ -96,12 +107,14 @@ class MainView: BaseSteviaView, UIGestureRecognizerDelegate {
     
     //MARK: - UITapGestureRecognizer
     
-    func fromTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
-        self.getDelegate()?.onCurrencyLabelClicked(label: fromCurrencyLabel)
+    @objc private func sellingCurrencySelectionTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
+        guard let text = buyingCurrencyLabel.text else { return }
+        self.getDelegate()?.onSellingCurrencySelectionClicked(currency: text)
     }
     
-    func toTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
-        self.getDelegate()?.onCurrencyLabelClicked(label: toCurrencyLabel)
+    @objc private func buyingCurrencySelectionTapGestureHandler(sender: UITapGestureRecognizer? = nil) {
+        guard let text = buyingCurrencyLabel.text else { return }
+        self.getDelegate()?.onBuyingCurrencySelectionClicked(currency: text)
     }
     
 }

@@ -21,8 +21,8 @@
 		400CA5951F4ED94400C95EA7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5941F4ED94400C95EA7 /* Router.swift */; };
 		400CA5971F4EDAC600C95EA7 /* UIViewController+Topmost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */; };
 		400CA5991F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */; };
-		403578FB1F55991000AEE0FC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FA1F55991000AEE0FC /* Colors.swift */; };
-		403578FD1F55994800AEE0FC /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FC1F55994800AEE0FC /* ColorExtension.swift */; };
+		403578FB1F55991000AEE0FC /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FA1F55991000AEE0FC /* Themes.swift */; };
+		403578FD1F55994800AEE0FC /* UIColor+ColorWithHexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403578FC1F55994800AEE0FC /* UIColor+ColorWithHexString.swift */; };
 		409252EB1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */; };
 		409252F01F4C21EF00BBFE73 /* Alamofire.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252ED1F4C21EF00BBFE73 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		409252F11F4C21EF00BBFE73 /* BoltsSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,8 +82,8 @@
 		400CA5941F4ED94400C95EA7 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Topmost.swift"; sourceTree = "<group>"; };
 		400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentInNavigationViewController.swift"; sourceTree = "<group>"; };
-		403578FA1F55991000AEE0FC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Constants/Colors.swift; sourceTree = "<group>"; };
-		403578FC1F55994800AEE0FC /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		403578FA1F55991000AEE0FC /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Themes.swift; path = Constants/Themes.swift; sourceTree = "<group>"; };
+		403578FC1F55994800AEE0FC /* UIColor+ColorWithHexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorWithHexString.swift"; sourceTree = "<group>"; };
 		409252EA1F4C213B00BBFE73 /* CurrencyConversionApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConversionApiClient.swift; sourceTree = "<group>"; };
 		409252ED1F4C21EF00BBFE73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		409252EE1F4C21EF00BBFE73 /* BoltsSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoltsSwift.framework; path = Carthage/Build/iOS/BoltsSwift.framework; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		400CA5841F4ECA5800C95EA7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				403578FC1F55994800AEE0FC /* ColorExtension.swift */,
+				403578FC1F55994800AEE0FC /* UIColor+ColorWithHexString.swift */,
 				400CA5981F4EEE9900C95EA7 /* UIViewController+PresentInNavigationViewController.swift */,
 				400CA5961F4EDAC600C95EA7 /* UIViewController+Topmost.swift */,
 				400CA5851F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift */,
@@ -204,7 +204,7 @@
 		403578FE1F55A37000AEE0FC /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				403578FA1F55991000AEE0FC /* Colors.swift */,
+				403578FA1F55991000AEE0FC /* Themes.swift */,
 			);
 			name = Themes;
 			sourceTree = "<group>";
@@ -501,7 +501,7 @@
 				ED999C491F4C1DB7004C018E /* AppDelegate.swift in Sources */,
 				400CA57F1F4EC9AE00C95EA7 /* BaseViewController.swift in Sources */,
 				400CA5971F4EDAC600C95EA7 /* UIViewController+Topmost.swift in Sources */,
-				403578FB1F55991000AEE0FC /* Colors.swift in Sources */,
+				403578FB1F55991000AEE0FC /* Themes.swift in Sources */,
 				400CA5811F4EC9E600C95EA7 /* BaseView.swift in Sources */,
 				400CA5951F4ED94400C95EA7 /* Router.swift in Sources */,
 				400CA5861F4ECA8000C95EA7 /* UIViewController+isRootViewControllerInNavigation.swift in Sources */,
@@ -509,7 +509,7 @@
 				40D289881F5406A0000906DD /* Alerts.swift in Sources */,
 				400CA5911F4ED8F500C95EA7 /* MainRouter.swift in Sources */,
 				40B2DD2E1F50288A0028739F /* GeoConstaints.swift in Sources */,
-				403578FD1F55994800AEE0FC /* ColorExtension.swift in Sources */,
+				403578FD1F55994800AEE0FC /* UIColor+ColorWithHexString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
